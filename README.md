@@ -8,6 +8,7 @@ curl -L https://get.oh-my.fish | fish
 omf install bobthefish
 ```
 
-Put `fish_right_prompt.fish` into `~/.config/fish/functions/`. Don't forget to move `rg.fish` to `$HOME/.config/fish/completions`
+Put `fish_right_prompt.fish` into `~/.config/fish/functions/`. 
+Don't forget to copy `rg.fish` from `$RG_INSTALL_PATH/share/fish/vendor_completions.d/rg.fish` to `$HOME/.config/fish/completions`. 
 
 
