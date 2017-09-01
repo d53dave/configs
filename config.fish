@@ -10,6 +10,7 @@ source $OMF_PATH/init.fish
 set -gx PATH $PATH /usr/local/cuda/bin
 
 # Replace ls with exa
+alias l ="exa -l --git"
 alias ls="exa"
 alias ll="exa -ghlSmU --git"
 alias lt="exa -htl"
