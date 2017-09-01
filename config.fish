@@ -13,7 +13,7 @@ set -gx PATH $PATH /usr/local/cuda/bin
 alias l ="exa -l --git"
 alias ls="exa"
 alias ll="exa -ghlSmU --git"
-alias lt="exa -htl"
+alias lt="exa -hlT"
 
 # Or write them as `setenv NAME VAL` into ~/.env
 # setenv now works as it would in bash/zsh, yay
