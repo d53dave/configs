@@ -27,3 +27,4 @@ function setenv
  end
 
 source ~/.env
+xbindkeys
