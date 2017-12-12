@@ -13,6 +13,12 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 curl -L https://get.oh-my.fish | fish
 omf install bobthefish
 
+# Install fisher
+curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
+
+# Install bass, a bash script wrapper for fish
+fisher edc/bass 
+
 # Install exa
 curl -O https://the.exa.website/releases/exa-linux-x86_64-0.7.0.zip
 unzip exa-linux-x86_64-0.7.0.zip && mv exa-linux-x86_64 /usr/local/bin/exa
