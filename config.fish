@@ -26,6 +26,10 @@ alias ls="exa"
 alias ll="exa -ghlSmU --git"
 alias lt="exa -hlT"
 
+# Spacemacs is cool, now make it start fast
+alias s="emacsclient -t --alternate-editor=\"\""
+alias space=s
+
 # Invoke some bass scripts for fun and profit
 bass source ~/.nvm/nvm.sh --no-use ';' nvm use 9
 
