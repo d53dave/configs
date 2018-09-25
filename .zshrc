@@ -86,7 +86,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-
+# TODO: Review Jenv setup
 export PATH="/Users/dsere/.jenv/shims:${PATH}"
 source "/usr/local/Cellar/jenv/0.4.4/libexec/libexec/../completions/jenv.zsh"
 jenv rehash 2>/dev/null
@@ -132,3 +132,52 @@ POWERLEVEL9K_CHANGESET_HASH_LENGTH=6
 export DEFAULT_USER="λ"
 export USER="λ"
 export SLIMERJSLAUNCHER=/Applications/Firefox.app/Contents/MacOS/firefox
+
+
+
+alias resetterm="stty sane; tput rs1;"
+
+alias l="exa -l"                                                                
+alias ls="exa"                                                                  
+alias ll="exa -ghlSmU --git"                                                    
+alias lt="exa -hlT"                                                             
+                                                                               
+s() { emacsclient -c "$@" & }
+alias st="emacsclient -t --alternate-editor=\"\""
+alias space=st
+
+export PATH=/usr/local/miniconda3/bin:"$PATH"
+
+source "/usr/local/opt/nvm/nvm.sh"
+eval "$(jenv init -)"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+setenv () {
+    if [ "x$1" = "x" ] ; then
+      echo "$0: environment variable name required" >&2
+    elif [ "x$2" = "x" ] ; then
+      echo "$0: environment variable value required" >&2
+    else
+      export $1=$2
+    fi
+}
+
+unsetenv () {
+    if [ "x$1" = "x" ] ; then
+      echo "$0: environment variable name required" >&2
+    else
+      unset $1
+   fi
+}
+
+autoload -Uz compinit
+compinit
+# Completion for kitty
+kitty + complete setup zsh | source /dev/stdin
+
+alias icat="kitty +kitten icat"
+
+export LANG=en_US.UTF-8
+export LC_CTYPE=en_US.UTF-8
+
